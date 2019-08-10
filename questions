@@ -1,0 +1,663 @@
+numberOfItems = 0
+
+_G.MCQuestions = {
+	Q1 = {
+		["Question"] = "How many years are in a millenium?",
+		["Answer1"] = "100",
+		["Answer2"] = "10000",
+		["Answer3"] = "1000",
+		["Answer4"] = "10",
+		["CorrectAnswer"] = "Answer3"
+		
+	},
+	Q2 = {
+		["Question"] = "What is the first element in the periodic table?",
+		["Answer1"] = "Hydrogen",
+		["Answer2"] = "Fluride",
+		["Answer3"] = "Iron",
+		["Answer4"] = "Oxygen",
+		["CorrectAnswer"] = "Answer1"
+		
+	},
+	Q3 = {
+		["Question"] = "What is the capital of England?",
+		["Answer1"] = "York",
+		["Answer2"] = "Manchester",
+		["Answer3"] = "Paris",
+		["Answer4"] = "London",
+		["CorrectAnswer"] = "Answer4"
+		
+	},
+		Q4 = {
+		["Question"] = "Who is Batman's partner?",
+		["Answer1"] = "Robin",
+		["Answer2"] = "Wonder Woman",
+		["Answer3"] = "Catwoman",
+		["Answer4"] = "Spiderman",
+		["CorrectAnswer"] = "Answer1"
+		},
+		Q5 = {
+		["Question"] = "How many days are there in June?",
+		["Answer1"] = "29",
+		["Answer2"] = "30",
+		["Answer3"] = "31",
+		["Answer4"] = "28",
+		["CorrectAnswer"] = "Answer2"
+		},
+		Q6 = {
+		["Question"] = "What country is the greatest producer of wine?",
+		["Answer1"] = "Sweden",
+		["Answer2"] = "Germany",
+		["Answer3"] = "United States",
+		["Answer4"] = "Italy",
+		["CorrectAnswer"] = "Answer4"
+		},
+		Q7 = {
+		["Question"] = "How many US states border the Gulf of Mexico?",
+		["Answer1"] = "7",
+		["Answer2"] = "6",
+		["Answer3"] = "5",
+		["Answer4"] = "4",
+		["CorrectAnswer"] = "Answer3"
+		},
+				Q8 = {
+		["Question"] = "What is the fastest land animal on Earth?",
+		["Answer1"] = "Cheetah",
+		["Answer2"] = "Human",
+		["Answer3"] = "Lion",
+		["Answer4"] = "Tiger",
+		["CorrectAnswer"] = "Answer1"
+				},
+				Q9 = {
+		["Question"] = "How many legs does a spider have?",
+		["Answer1"] = "8",
+		["Answer2"] = "6",
+		["Answer3"] = "10",
+		["Answer4"] = "12",
+		["CorrectAnswer"] = "Answer1"
+				},
+				Q10 = {
+		["Question"] = "What is the largest 'Big Cat' in the world?",
+		["Answer1"] = "Leopard",
+		["Answer2"] = "Jaguar",
+		["Answer3"] = "Lion",
+		["Answer4"] = "Tiger",
+		["CorrectAnswer"] = "Answer4"
+		},
+	Q11 = {
+		["Question"] = "The Beatles music band featured how many members?",
+		["Answer1"] = "3",
+		["Answer2"] = "4",
+		["Answer3"] = "5",
+		["Answer4"] = "6",
+		["CorrectAnswer"] = "Answer2"
+		
+	},
+	Q12 = {
+		["Question"] = "Who is the founder of Roblox?",
+		["Answer1"] = "Sorcus",
+		["Answer2"] = "David Baszucki",
+		["Answer3"] = "John Shedletsky",
+		["Answer4"] = "Telamon",
+		["CorrectAnswer"] = "Answer2"
+		
+	},
+	Q13 = {
+		["Question"] = "What is the 4th Largest State in the U.S.",
+		["Answer1"] = "Alaska",
+		["Answer2"] = "Montana",
+		["Answer3"] = "Texas",
+		["Answer4"] = "California",
+		["CorrectAnswer"] = "Answer2"
+		
+	},
+		Q14 = {
+		["Question"] = "Who created the Board Game Monopoly?",
+		["Answer1"] = "Parker Bros",
+		["Answer2"] = "Hasbro",
+		["Answer3"] = "Out of this box",
+		["Answer4"] = "Treyarch",
+		["CorrectAnswer"] = "Answer1"
+		
+		},
+			Q15 = {
+		["Question"] = "What Company Created the Mac OS",
+		["Answer1"] = "Microsoft",
+		["Answer2"] = "Samsung",
+		["Answer3"] = "Apple",
+		["Answer4"] = "HP",
+		["CorrectAnswer"] = "Answer3"
+		
+			},
+				Q16 = {
+		["Question"] = "What year was the first Roblox Egg Hunt",
+		["Answer1"] = "2009",
+		["Answer2"] = "2008",
+		["Answer3"] = "2010",
+		["Answer4"] = "2011",
+		["CorrectAnswer"] = "Answer2"
+		
+	},
+	Q17 = {
+		["Question"] = "Who was the founder of Apple",
+		["Answer1"] = "John Cena",
+		["Answer2"] = "Curious George",
+		["Answer3"] = "Bill Gates",
+		["Answer4"] = "Steve Jobs",
+		["CorrectAnswer"] = "Answer4"
+		
+	},
+		Q18 = {
+		["Question"] = "What is the smallest planet in our solar system",
+		["Answer1"] = "Mercury",
+		["Answer2"] = "Pluto",
+		["Answer3"] = "Saturn",
+		["Answer4"] = "Earth",
+		["CorrectAnswer"] = "Answer1"
+		
+		},
+			Q19 = {
+		["Question"] = "Name an Orange Vegetable",
+		["Answer1"] = "Carrot",
+		["Answer2"] = "Orange",
+		["Answer3"] = "Potato",
+		["Answer4"] = "Lemon",
+		["CorrectAnswer"] = "Answer1"
+		
+			},
+			Q20 = {
+		["Question"] = "Who or What is at the top of the food chain?",
+		["Answer1"] = "Humans",
+		["Answer2"] = "Sharks",
+		["Answer3"] = "Lions",
+		["Answer4"] = "Ants",
+		["CorrectAnswer"] = "Answer1"
+		
+			},
+	Q21 = {
+		["Question"] = "How do you measure Gold's purity",
+		["Answer1"] = "Meters",
+		["Answer2"] = "Pounds",
+		["Answer3"] = "Karats",
+		["Answer4"] = "Carrots",
+		["CorrectAnswer"] = "Answer3"
+		
+	},			
+	Q22 = {
+		["Question"] = "What is the character in Minecraft called?",
+		["Answer1"] = "Blocky",
+		["Answer2"] = "Bob",
+		["Answer3"] = "Arnold",
+		["Answer4"] = "Steve",
+		["CorrectAnswer"] = "Answer4"
+		
+	},		
+	Q23 = {
+		["Question"] = "Purple is normal associated with what flavor",
+		["Answer1"] = "Grape",
+		["Answer2"] = "Raspberry",
+		["Answer3"] = "Lemon",
+		["Answer4"] = "Apple",
+		["CorrectAnswer"] = "Answer1"
+		
+	},		
+	Q24 = {
+		["Question"] = "What is the tallest mountain in our Solar System",
+		["Answer1"] = "Mt. Olympus",
+		["Answer2"] = "Mt. Everest",
+		["Answer3"] = "Andes Mountains",
+		["Answer4"] = "John Cena",
+		["CorrectAnswer"] = "Answer1"
+		
+},		
+Q25 = {
+		["Question"] = "Who invented the lightbuld",
+		["Answer1"] = "Alexander Graham Bell",
+		["Answer2"] = "Thomas Jefferson",
+		["Answer3"] = "Thomas Edison",
+		["Answer4"] = "Thomas the train",
+		["CorrectAnswer"] = "Answer3"
+		
+	},		
+			
+			Q26 = {
+		["Question"] = "Who is the creator of Roblox Deathrun",
+		["Answer1"] = "Wsly",
+		["Answer2"] = "loleris",
+		["Answer3"] = "CodeJared",
+		["Answer4"] = "Shedletsky",
+		["CorrectAnswer"] = "Answer1"
+		
+			},		
+			Q27 = {
+		["Question"] = "Who is the 44th president of the United States",
+		["Answer1"] = "Barack Obama",
+		["Answer2"] = "Joe Biden",
+		["Answer3"] = "George W. Bush",
+		["Answer4"] = "Curious George",
+		["CorrectAnswer"] = "Answer1"
+		
+			},		
+			Q28 = {
+		["Question"] = "Who is the Creator of Who's Still Standing",
+		["Answer1"] = "loleris",
+		["Answer2"] = "CodeJared",
+		["Answer3"] = "JohnCena",
+		["Answer4"] = "Mistertitanic44",
+		["CorrectAnswer"] = "Answer2"
+		
+			},		
+			Q29 = {
+		["Question"] = "Which snake, who's untreated bite is almost 100 percent fatal, is the world's fastest snake on land?",
+		["Answer1"] = "Black Mamba",
+		["Answer2"] = "Cobra",
+		["Answer3"] = "Rattler",
+		["Answer4"] = "Python",
+		["CorrectAnswer"] = "Answer1"
+		
+			},	
+			Q30 = {
+		["Question"] = "The llama is a domesticated camelid that is native to which continent?",
+		["Answer1"] = "North America",
+		["Answer2"] = "Europe",
+		["Answer3"] = "Africa",
+		["Answer4"] = "South America",
+		["CorrectAnswer"] = "Answer1"
+		
+			},	
+			Q31 = {
+		["Question"] = "A panda's daily diet consists almost entirely of which plant?",
+		["Answer1"] = "Roses",
+		["Answer2"] = "Bark",
+		["Answer3"] = "Bamboo",
+		["Answer4"] = "Grass",
+		["CorrectAnswer"] = "Answer3"
+		
+			},	
+			Q32 = {
+		["Question"] = "What was the name of the gorilla that was shot and killed at the Cincinnati zoo in 2016 after a three-year old boy fell into the enclosure?",
+		["Answer1"] = "Abe",
+		["Answer2"] = "Snowy",
+		["Answer3"] = "Cody",
+		["Answer4"] = "Harambe",
+		["CorrectAnswer"] = "Answer4"
+		
+			},	
+			Q33 = {
+		["Question"] = "What is the largest species of terrestrial crab in the world?",
+		["Answer1"] = "The Coconut Crab",
+		["Answer2"] = "The Pinchy One",
+		["Answer3"] = "Hermit Crab",
+		["Answer4"] = "The Butterfly Crab",
+		["CorrectAnswer"] = "Answer1"
+		
+			},	
+			Q34 = {
+		["Question"] = "What is the name of the male bee that comes from an unfertilized egg?",
+		["Answer1"] = "Worker",
+		["Answer2"] = "Drone",
+		["Answer3"] = "Queen",
+		["Answer4"] = "Honey",
+		["CorrectAnswer"] = "Answer2"
+		
+			},	
+			Q35 = {
+		["Question"] = "Cynophobia is the fear of which animal?",
+		["Answer1"] = "Spiders",
+		["Answer2"] = "Bees",
+		["Answer3"] = "Dogs",
+		["Answer4"] = "Bears",
+		["CorrectAnswer"] = "Answer3"
+		
+			},	
+			Q36 = {
+		["Question"] = "The term wake, kettle, or committee refers to a group of what bird?",
+		["Answer1"] = "Eagle",
+		["Answer2"] = "Parrot",
+		["Answer3"] = "Robin",
+		["Answer4"] = "Vulture",
+		["CorrectAnswer"] = "Answer4"
+		
+			},	
+			Q37 = {
+		["Question"] = "Which of the traditional five senses are dolphins believed not to possess?",
+		["Answer1"] = "Smell",
+		["Answer2"] = "Sight",
+		["Answer3"] = "Hearing",
+		["Answer4"] = "Taste",
+		["CorrectAnswer"] = "Answer1"
+		
+			},	
+			Q38 = {
+		["Question"] = "A flamboyance is a group of what animal?",
+		["Answer1"] = "Penguins",
+		["Answer2"] = "Flamingos",
+		["Answer3"] = "Ducks",
+		["Answer4"] = "Turtles",
+		["CorrectAnswer"] = "Answer2"
+		
+			},	
+			Q39 = {
+		["Question"] = "The Chihuahua is a breed of dog believed to originate from what country?",
+		["Answer1"] = "United States",
+		["Answer2"] = "United Kingdom",
+		["Answer3"] = "Mexico",
+		["Answer4"] = "Austrailia",
+		["CorrectAnswer"] = "Answer3"
+		
+			},	
+			Q40 = {
+		["Question"] = "What does the acronym USB stand for when referring to a computer port?",
+		["Answer1"] = "Unified Serial Bar",
+		["Answer2"] = "Universal Standard Brick",
+		["Answer3"] = "Universal Stick Bar",
+		["Answer4"] = "Universal Serial Bus",
+		["CorrectAnswer"] = "Answer4"
+		
+			},	
+			Q41 = {
+		["Question"] = "What do you call the small image icons used to express emotions or ideas in digital communication?",
+		["Answer1"] = "Emojis",
+		["Answer2"] = "Smileys",
+		["Answer3"] = "Faces",
+		["Answer4"] = "Animations",
+		["CorrectAnswer"] = "Answer1"
+		
+			},	
+			Q42 = {
+		["Question"] = "When referring to a computer monitor, what does the acronym LCD stand for?",
+		["Answer1"] = "Large Common Display",
+		["Answer2"] = "Liquid Crystal Display",
+		["Answer3"] = "Lucid Common Dream",
+		["Answer4"] = "Liquid Carrot Display",
+		["CorrectAnswer"] = "Answer2"
+		
+			},	
+			Q43 = {
+		["Question"] = "What is the three letter airport code for the Los Angeles International Airport?",
+		["Answer1"] = "LAP",
+		["Answer2"] = "ALX",
+		["Answer3"] = "LAX",
+		["Answer4"] = "LAD",
+		["CorrectAnswer"] = "Answer3"
+		
+			},	
+			Q44 = {
+		["Question"] = "Including Rudolph, how many reindeer is Santa Claus said to have?",
+		["Answer1"] = "10",
+		["Answer2"] = "7",
+		["Answer3"] = "8",
+		["Answer4"] = "9",
+		["CorrectAnswer"] = "Answer4"
+		
+			},	
+			Q45 = {
+		["Question"] = "What type of animal is Looney Tunes' fictional character Foghorn J. Leghorn?",
+		["Answer1"] = "Rooster",
+		["Answer2"] = "Chicken",
+		["Answer3"] = "Duck",
+		["Answer4"] = "Rabbit",
+		["CorrectAnswer"] = "Answer1"
+		
+			},	
+			Q46 = {
+		["Question"] = "According to the popular Christmas song, Frosty the Snowman, what are the snowman's eyes made out of?",
+		["Answer1"] = "Buttons",
+		["Answer2"] = "Coal",
+		["Answer3"] = "Carrots",
+		["Answer4"] = "Sticks",
+		["CorrectAnswer"] = "Answer2"
+		
+			},	
+			Q47 = {
+		["Question"] = "In the United States, what holiday is celebrated every year on the fourth Thursday of November?",
+		["Answer1"] = "Valentines Day",
+		["Answer2"] = "Christmas",
+		["Answer3"] = "Thanksgiving",
+		["Answer4"] = "Verterans Day",
+		["CorrectAnswer"] = "Answer3"
+		
+			},	
+			Q48 = {
+		["Question"] = "In the United States and Canada, one ton is a unit of measure that contains how many pounds?",
+		["Answer1"] = "500",
+		["Answer2"] = "2500",
+		["Answer3"] = "3000",
+		["Answer4"] = "2000",
+		["CorrectAnswer"] = "Answer4"
+		
+			},	
+			Q49 = {
+		["Question"] = "Which major battle of WWII started on August 23, 1942 and was fought in what is now the city of Volgograd?",
+		["Answer1"] = "Battle of Stalingrad",
+		["Answer2"] = "Normandy Invasion",
+		["Answer3"] = "Battle of the Buldge",
+		["Answer4"] = "Battle of the Midway",
+		["CorrectAnswer"] = "Answer1"
+		
+			},	
+			Q50 = {
+		["Question"] = "Traditionally, the term caviar refers to the salt-cured roe of which fish?",
+		["Answer1"] = "Cod",
+		["Answer2"] = "Sturgeon",
+		["Answer3"] = "Perch",
+		["Answer4"] = "Salmon",
+		["CorrectAnswer"] = "Answer2"
+		
+			},	
+			Q51 = {
+		["Question"] = "Mexican tortillas were originally made from the grain of which plant?",
+		["Answer1"] = "Grapes",
+		["Answer2"] = "Grass",
+		["Answer3"] = "Corn",
+		["Answer4"] = "Wheat",
+		["CorrectAnswer"] = "Answer3"
+		
+			},	
+			Q52 = {
+		["Question"] = "Celebrity chef Gordon Ramsay opened his first restaurant in what city?",
+		["Answer1"] = "Chicago",
+		["Answer2"] = "New York",
+		["Answer3"] = "Wales",
+		["Answer4"] = "London",
+		["CorrectAnswer"] = "Answer4"
+		
+			},	
+			Q53 = {
+		["Question"] = "Sushi is a type of cuisine that originated in what country?",
+		["Answer1"] = "Japan",
+		["Answer2"] = "China",
+		["Answer3"] = "Germany",
+		["Answer4"] = "United States",
+		["CorrectAnswer"] = "Answer1"
+		
+			},	
+			Q54 = {
+		["Question"] = "The original Starbucks was established in 1971 in what U.S. city?",
+		["Answer1"] = "Chicago",
+		["Answer2"] = "Seattle",
+		["Answer3"] = "New York",
+		["Answer4"] = "Houston",
+		["CorrectAnswer"] = "Answer2"
+		
+			},	
+			Q55 = {
+		["Question"] = "The first McDonald's restaurant openend in which U.S. state?",
+		["Answer1"] = "Washington",
+		["Answer2"] = "Florida",
+		["Answer3"] = "California",
+		["Answer4"] = "Wisconsin",
+		["CorrectAnswer"] = "Answer3"
+		
+			},	
+			Q56 = {
+		["Question"] = "Roquefort is a French blue cheese made from the milk of what animal?",
+		["Answer1"] = "Duck",
+		["Answer2"] = "Goat",
+		["Answer3"] = "Cow",
+		["Answer4"] = "Sheep",
+		["CorrectAnswer"] = "Answer4"
+		
+			},	
+			Q57 = {
+		["Question"] = "What fast food franchise has the most worldwide locations?",
+		["Answer1"] = "Subway",
+		["Answer2"] = "McDonalds",
+		["Answer3"] = "Burger King",
+		["Answer4"] = "Starbucks",
+		["CorrectAnswer"] = "Answer1"
+		
+			},	
+			Q58 = {
+		["Question"] = "Granny Smith is a popular type of which fruit?",
+		["Answer1"] = "Banana",
+		["Answer2"] = "Apple",
+		["Answer3"] = "Grape",
+		["Answer4"] = "Orange",
+		["CorrectAnswer"] = "Answer2"
+		
+			},	
+			Q59 = {
+		["Question"] = "Dijon mustand originated in the city of Dijon, located in what country?",
+		["Answer1"] = "United States",
+		["Answer2"] = "Germany",
+		["Answer3"] = "France",
+		["Answer4"] = "Italy",
+		["CorrectAnswer"] = "Answer3"
+		
+			},	
+			Q60 = {
+		["Question"] = "In what year did McDonald's start serving breakfast with the introduction of the Egg McMuffin?",
+		["Answer1"] = "1950",
+		["Answer2"] = "2005",
+		["Answer3"] = "1985",
+		["Answer4"] = "1972",
+		["CorrectAnswer"] = "Answer4"
+		
+			}
+
+}
+
+
+_G.TypeQuestions = {
+	Q1 = {
+		["Question"] = "What is 5 x 5?",
+		["CorrectAnswer"] = "25"
+		
+	},
+	Q2 = {
+		["Question"] = "Bees create what sweet substance?",
+		["CorrectAnswer"] = "Honey"
+		
+	},
+	Q3 = {
+		["Question"] = "What is 7 x 5?",
+		["CorrectAnswer"] = "35"
+		
+	},
+	Q4 = {
+		["Question"] = "10 x 10?",
+		["CorrectAnswer"] = "100"
+		
+	},
+	Q5 = {
+		["Question"] = "True or false? An apple is a vegetable.",
+		["CorrectAnswer"] = "False"
+		
+	},
+	Q6 = {
+		["Question"] = "What is 9 x 9",
+		["CorrectAnswer"] = "81"
+		
+	},
+	Q7 = {
+		["Question"] = "What is 20 x 2?",
+		["CorrectAnswer"] = "40"
+		
+	},
+	Q8 = {
+		["Question"] = "What is 3 x 10",
+		["CorrectAnswer"] = "30"
+		
+	},
+	Q9 = {
+		["Question"] = "What company's is home to Mickey Mouse?",
+		["CorrectAnswer"] = "Disney"
+		
+	},
+	Q10 = {
+		["Question"] = "What is 4 squared",
+		["CorrectAnswer"] = "16"
+		
+	},
+	Q11 = {
+	["Question"] = "What company makes iPhones?",
+		["CorrectAnswer"] = "Apple"
+		
+	},
+		Q12 = {
+	["Question"] = "Who created The Mad Murderer",
+		["CorrectAnswer"] = "loleris"
+		
+		}
+	
+}
+
+
+_G.MemeQuestions = {
+	Q1 = {
+		["Question"] = "MEME! And his name is...",
+		["Answer1"] = "DJ KHALED",
+		["Answer2"] = "KEEMSTAR",
+		["Answer3"] = "JOHN CENA",
+		["Answer4"] = "RANDY ORTON",
+		["CorrectAnswer"] = "Answer3"
+		
+	},
+	Q2 = {
+		["Question"] = "MEME! Who has the best fupa",
+		["Answer1"] = "DJ Khaled",
+		["Answer2"] = "Ethan",
+		["Answer3"] = "Ron",
+		["Answer4"] = "Hila",
+		["CorrectAnswer"] = "Answer2"
+		
+	},
+		Q3 = {
+		["Question"] = "MEME! I'm the map I'm the map",
+		["Answer1"] = "Dora",
+		["Answer2"] = "Boots",
+		["Answer3"] = "Diego",
+		["Answer4"] = "Bob the builder",
+		["CorrectAnswer"] = "Answer1"
+		
+		},
+				Q4 = {
+		["Question"] = "MEME! 9+10",
+		["Answer1"] = "666",
+		["Answer2"] = "420",
+		["Answer3"] = "38",
+		["Answer4"] = "21",
+		["CorrectAnswer"] = "Answer4"
+		
+				},
+				Q5 = {
+		["Question"] = "MEME! Here comes...",
+		["Answer1"] = "Alex",
+		["Answer2"] = "Pepe",
+		["Answer3"] = "JOHN CENA",
+		["Answer4"] = "Dat boi",
+		["CorrectAnswer"] = "Answer4"
+		
+				},
+				Q6 = {
+		["Question"] = "MEME! What came in the mail today?",
+		["Answer1"] = "Alex",
+		["Answer2"] = "Deez Nuts",
+		["Answer3"] = "JOHN CENA",
+		["Answer4"] = "Dat boi",
+		["CorrectAnswer"] = "Answer2"
+		
+	},
+	
+	}
