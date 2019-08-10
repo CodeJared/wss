@@ -1,0 +1,388 @@
+function AskQuestion(PodName)
+	game.Workspace.DropSong1:Stop()
+	game.Workspace.DropSong2:Stop()
+	Functions.InputedAnswer.Value = ""
+	GuiGameMove()
+	wait()
+	game.Workspace.GlobalFunctions.RemoveQuestion:FireAllClients()
+	if Gamemode ~= "Speed" and PodName ~= Center then
+		QuestionsCalled = QuestionsCalled + 1
+		if QuestionsCalled >= MaxQuestions then
+			ChangeText("The max amount of questions has been reached")
+			wait(3)
+			ChangeText("The battle has resulted in a tie")
+			wait(2)
+			Reset()
+			return
+		end
+	elseif Gamemode == "Speed" and PodName ~= Center then
+		QuestionsCalled = QuestionsCalled + 1
+		if QuestionsCalled >= MaxQuestions * 4 then
+			ChangeText("The game has not ended in the allowed time")
+			wait(3)
+			ChangeText("Nobody has won")
+			wait(3)
+			Reset()
+			return
+		end
+	end
+	UpdatePlayers()
+	if QuestionDebounce == false then
+		PlayBattleMusic()
+		QuestionDebounce = true
+	end
+	TimedNum = 0
+	ChangeTime("10")
+	local Connections = game.Workspace.Connections
+	if game.Workspace:FindFirstChild(PodName) then
+		if PodName == Pod1 then
+			Connections.Connect1.Transparency = 0
+			
+			Connections.Connect2.Transparency = 1
+			Connections.Connect3.Transparency = 1
+			Connections.Connect4.Transparency = 1
+			Connections.Connect5.Transparency = 1
+			Connections.Connect6.Transparency = 1
+			Connections.Connect7.Transparency = 1
+			Connections.Connect8.Transparency = 1
+			
+			for i,z in pairs(game.Workspace.Lights:GetChildren()) do
+				if z.Name ~= "Pod1" and z.Name ~= "Center" then
+					z.SpotLight.Enabled = false
+					wait(.1)
+					 else z.SpotLight.Enabled = true
+
+				end
+			end
+		elseif PodName == Pod2 then
+			Connections.Connect2.Transparency = 0
+			
+			Connections.Connect1.Transparency = 1
+			Connections.Connect3.Transparency = 1
+			Connections.Connect4.Transparency = 1
+			Connections.Connect5.Transparency = 1
+			Connections.Connect6.Transparency = 1
+			Connections.Connect7.Transparency = 1
+			Connections.Connect8.Transparency = 1
+			
+						for i,z in pairs(game.Workspace.Lights:GetChildren()) do
+				if z.Name ~= "Pod2" and z.Name ~= "Center" then
+					z.SpotLight.Enabled = false
+					wait(.1)
+					 else z.SpotLight.Enabled = true
+				end
+			end
+		elseif PodName == Pod3 then
+			Connections.Connect3.Transparency = 0
+			
+			Connections.Connect1.Transparency = 1
+			Connections.Connect2.Transparency = 1
+			Connections.Connect4.Transparency = 1
+			Connections.Connect5.Transparency = 1
+			Connections.Connect6.Transparency = 1
+			Connections.Connect7.Transparency = 1
+			Connections.Connect8.Transparency = 1
+			
+						for i,z in pairs(game.Workspace.Lights:GetChildren()) do
+				if z.Name ~= "Pod3" and z.Name ~= "Center" then
+					z.SpotLight.Enabled = false wait(.1) else z.SpotLight.Enabled = true
+				end
+			end
+		elseif PodName == Pod4 then
+			Connections.Connect4.Transparency = 0
+			
+			Connections.Connect1.Transparency = 1
+			Connections.Connect2.Transparency = 1
+			Connections.Connect3.Transparency = 1
+			Connections.Connect5.Transparency = 1
+			Connections.Connect6.Transparency = 1
+			Connections.Connect7.Transparency = 1
+			Connections.Connect8.Transparency = 1
+						for i,z in pairs(game.Workspace.Lights:GetChildren()) do
+				if z.Name ~= "Pod4" and z.Name ~= "Center" then
+					z.SpotLight.Enabled = false wait(.1) else z.SpotLight.Enabled = true
+				end
+			end
+		elseif PodName == Pod5 then
+			Connections.Connect5.Transparency = 0
+			
+			Connections.Connect1.Transparency = 1
+			Connections.Connect2.Transparency = 1
+			Connections.Connect3.Transparency = 1
+			Connections.Connect4.Transparency = 1
+			Connections.Connect6.Transparency = 1
+			Connections.Connect7.Transparency = 1
+			Connections.Connect8.Transparency = 1
+						for i,z in pairs(game.Workspace.Lights:GetChildren()) do
+				if z.Name ~= "Pod5" and z.Name ~= "Center" then
+					z.SpotLight.Enabled = false wait(.1) else z.SpotLight.Enabled = true
+				end
+			end
+		elseif PodName == Pod6 then
+			Connections.Connect6.Transparency = 0
+			
+			Connections.Connect1.Transparency = 1
+			Connections.Connect2.Transparency = 1
+			Connections.Connect3.Transparency = 1
+			Connections.Connect4.Transparency = 1
+			Connections.Connect5.Transparency = 1
+			Connections.Connect7.Transparency = 1
+			Connections.Connect8.Transparency = 1
+			
+						for i,z in pairs(game.Workspace.Lights:GetChildren()) do
+				if z.Name ~= "Pod6" and z.Name ~= "Center" then
+					z.SpotLight.Enabled = false wait(.1) else z.SpotLight.Enabled = true
+				end
+			end
+		elseif PodName == Pod7 then
+			Connections.Connect7.Transparency = 0
+			
+			Connections.Connect1.Transparency = 1
+			Connections.Connect2.Transparency = 1
+			Connections.Connect3.Transparency = 1
+			Connections.Connect4.Transparency = 1
+			Connections.Connect5.Transparency = 1
+			Connections.Connect6.Transparency = 1
+			Connections.Connect8.Transparency = 1
+						for i,z in pairs(game.Workspace.Lights:GetChildren()) do
+				if z.Name ~= "Pod7" and z.Name ~= "Center" then
+					z.SpotLight.Enabled = false wait(.1) else z.SpotLight.Enabled = true
+				end
+			end
+		elseif PodName == Pod8 then
+			Connections.Connect8.Transparency = 0
+			
+			Connections.Connect1.Transparency = 1
+			Connections.Connect2.Transparency = 1
+			Connections.Connect3.Transparency = 1
+			Connections.Connect4.Transparency = 1
+			Connections.Connect5.Transparency = 1
+			Connections.Connect6.Transparency = 1
+			Connections.Connect7.Transparency = 1
+			
+						for i,z in pairs(game.Workspace.Lights:GetChildren()) do
+				if z.Name ~= "Pod8" and z.Name ~= "Center" then
+					z.SpotLight.Enabled = false wait(.1) else z.SpotLight.Enabled = true
+				end
+			end
+			end
+if PodName ~= Center and PodName then
+	game.Workspace.GamePods.CurrentPod.Value = PodName
+end
+	GuiGameMove()
+	local num = math.random(1,2)
+	if num == 1 or num == 2 then
+	local numberOfItems = 0
+	if MemeRound == false then
+	for i,v in pairs(_G.MCQuestions) do
+	numberOfItems = numberOfItems + 1
+	end
+	else
+	for i,v in pairs(_G.MemeQuestions) do
+	numberOfItems = numberOfItems + 1
+	end
+	end
+	local oldrandomnum = math.random(1,numberOfItems)
+	local secondrandomnum = "Q"..oldrandomnum
+	local randomnum = _G.MCQuestions[secondrandomnum]
+	if MemeRound == true then
+		randomnum = _G.MemeQuestions[secondrandomnum]
+	end
+		print(randomnum)
+		wait()
+		if game.Players:FindFirstChild(PodName) then
+		game.Workspace.GlobalFunctions.CreateMCQ:FireClient(game.Players[PodName],randomnum.Question,randomnum.Answer1,randomnum.Answer2,randomnum.Answer3,randomnum.Answer4,randomnum.CorrectAnswer)
+		end
+		for i = 10,0,-0.1 do
+			UpdatePlayers()
+			if game.Workspace:FindFirstChild(CurrentPod) then
+			if CurrentPod == "" or game.Workspace[CurrentPod].Humanoid.Health == 0 then
+					local ReplacePod = FindNextPod()
+					wait()
+	if ReplacePod ~= "" then
+		CurrentPod = ReplacePod
+		AskQuestion(ReplacePod)
+	else
+	EndGame("Center")
+	end
+	game.Workspace.GlobalFunctions.RemoveQuestion:FireAllClients()
+				break
+			end
+			end
+			if Center == "" then
+				game.Workspace.GlobalFunctions.RemoveQuestion:FireAllClients()
+				Reset()
+				break
+			end
+			UpdatePlayers()
+			if Functions:FindFirstChild("InputedAnswer") then
+			if string.lower(Functions.InputedAnswer.Value) == string.lower(randomnum.CorrectAnswer) then
+				Functions.RemoveQuestion:FireAllClients()
+				if PodName ~= Center then
+						TimedNum = 0
+					ChangeTime("10")
+					AnswerCorrect(PodName)
+					wait(1)
+					AskQuestion(Center)
+				
+				else
+					
+					TimedNum = 0
+					ChangeTime("10")
+					if Gamemode == "Speed" then
+						DefaultTime = DefaultTime - 0.01
+					local RandomPlr = FindRandomPlayer()
+					wait()
+					if RandomPlr ~= "" then
+					AskQuestion(RandomPlr)
+					else
+						EndGame("Center")
+					end
+					elseif Gamemode == "Classic" then
+						DefaultTime = DefaultTime - 0.05
+						AnswerCorrect(PodName)
+						wait(1)
+						AskQuestion(CurrentPod)
+					end
+				end
+				break
+			end
+			if Functions.InputedAnswer.Value ~= "" then
+				Functions.RemoveQuestion:FireAllClients()
+				DropPod(PodName)
+				break
+			end
+			TimedNum = TimedNum + 1
+			if TimedNum == 10 then
+				ChangeTime("9")
+			elseif TimedNum == 20 then
+				ChangeTime("8")
+			elseif TimedNum == 30 then
+				ChangeTime("7")
+			elseif TimedNum == 40 then
+				ChangeTime("6")
+				elseif TimedNum == 50 then
+				ChangeTime("5")
+			elseif TimedNum == 60 then
+				ChangeTime("4")
+		elseif TimedNum == 70 then
+				ChangeTime("3")
+		elseif TimedNum == 80 then
+				ChangeTime("2")
+		elseif TimedNum == 90 then
+				ChangeTime("1")
+			elseif TimedNum == 100 then
+				Functions.RemoveQuestion:FireAllClients()
+				DropPod(PodName)
+			end
+			UpdatePlayers()
+			wait(DefaultTime)
+			end
+			end
+	elseif num == 2 then
+local numberOfItems = 0
+for i,v in pairs(_G.TypeQuestions) do
+numberOfItems = numberOfItems + 1
+end
+		
+		local oldrandomnum = math.random(1,numberOfItems)
+local secondrandomnum = "Q"..oldrandomnum
+local randomnum = _G.TypeQuestions[secondrandomnum]
+		
+		if game.Players:FindFirstChild(PodName) then
+		Functions.CreateTypeQ:FireClient(game.Players[PodName],randomnum.Question,randomnum.CorrectAnswer)
+		end
+		for i = 10,0,-0.1 do
+
+		if game.Workspace:FindFirstChild(CurrentPod) then
+			if CurrentPod == "" or game.Workspace[CurrentPod].Humanoid.Health == 0 then
+					local ReplacePod = FindNextPod()
+					wait()
+	if ReplacePod ~= "" then
+		CurrentPod = ReplacePod
+		AskQuestion(ReplacePod)
+		
+	else
+	EndGame("Center")
+	end
+	Functions.RemoveQuestion:FireAllClients()
+				break
+			end
+		end
+		
+			if Center == "" then
+				Functions.RemoveQuestion:FireAllClients()
+				Reset()
+				break
+			end	
+			UpdatePlayers()
+			if Functions:FindFirstChild("InputedAnswer") then	
+			if string.lower(Functions.InputedAnswer.Value) == string.lower(randomnum.CorrectAnswer) then
+				Functions.RemoveQuestion:FireAllClients()
+				if PodName ~= Center then
+					TimedNum = 0
+					ChangeTime("10")
+					AnswerCorrect(PodName)
+						wait(1)
+					AskQuestion(Center)
+					
+				else
+					
+					TimedNum = 0
+					ChangeTime("10")
+					if Gamemode == "Speed" then
+						DefaultTime = DefaultTime - 0.01
+					local RandomPlr = FindRandomPlayer()
+					wait()
+					if RandomPlr ~= "" then
+					AskQuestion(RandomPlr)
+					else
+						EndGame("Center")
+					end
+					elseif Gamemode == "Classic" then
+						DefaultTime = DefaultTime - 0.05
+						AnswerCorrect(PodName)
+						wait(1)
+						AskQuestion(CurrentPod)
+					end
+				end
+				break
+			end
+			TimedNum = TimedNum + 1
+			if TimedNum == 10 then
+				ChangeTime("9")
+			elseif TimedNum == 20 then
+				ChangeTime("8")
+			elseif TimedNum == 30 then
+				ChangeTime("7")
+			elseif TimedNum == 40 then
+				ChangeTime("6")
+				elseif TimedNum == 50 then
+				ChangeTime("5")
+			elseif TimedNum == 60 then
+				ChangeTime("4")
+		elseif TimedNum == 70 then
+				ChangeTime("3")
+		elseif TimedNum == 80 then
+				ChangeTime("2")
+		elseif TimedNum == 90 then
+				ChangeTime("1")
+			elseif TimedNum == 100 then
+				Functions.RemoveQuestion:FireAllClients()
+				DropPod(PodName)
+			end
+			UpdatePlayers()
+			wait(DefaultTime)
+			end
+			end
+	end
+	else
+	local ReplacePod = FindNextPod()
+	if ReplacePod ~= "" then
+		CurrentPod = ReplacePod
+		AskQuestion(ReplacePod)
+	else
+	EndGame("Center")
+	end
+	end
+end
